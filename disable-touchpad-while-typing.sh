@@ -6,7 +6,7 @@
 # Configuration
 TOUCHPAD_DEVICE="ASUS Zenbook Duo Keyboard Touchpad"
 KEYBOARD_DEVICE="ASUS Zenbook Duo Keyboard"
-DISABLE_DURATION=1  # seconds to keep touchpad disabled after last keystroke
+DISABLE_DURATION=500 # Editable: Milliseconds to keep touchpad disabled after last keystroke
 
 # Get keyboard event device
 KEYBOARD_EVENT=$(libinput list-devices 2>/dev/null | grep -A 20 "^Device:.*$KEYBOARD_DEVICE$" | grep "Kernel:" | awk '{print $2}' | head -1)
@@ -67,7 +67,7 @@ trap cleanup SIGINT SIGTERM EXIT
             CURRENT_TIME=$(date +%s%3N)  # milliseconds
             ELAPSED=$((CURRENT_TIME - LAST_TIME))
             
-            if [ $ELAPSED -ge $((DISABLE_DURATION * 1000)) ]; then
+            if [ $ELAPSED -ge $((DISABLE_DURATION)) ]; then
                 enable_touchpad
                 rm -f "$DISABLED_FLAG"  # Clear the disabled flag
                 rm -f "$TIMER_FILE"
