@@ -3,6 +3,7 @@ The Asus Zenbook Duo doesn't allow you to disable the touchpad while typing (On 
 Features:
 * Disables touchpad when typing with keyboard
 * Configurable timeout for touchpad when typing (can be personalized to user speed)
+* Disables touchpad when mouse is connected
 
 ## Tested On
 - **Model**: Asus Zenbook Duo 2024 ux8406ma
