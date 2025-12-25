@@ -1,0 +1,1 @@
+code/scripts/userScripts/touchpad-disable-on-mouse.sh

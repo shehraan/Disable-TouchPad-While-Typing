@@ -1,0 +1,1 @@
+/usr/local/bin/disable-touchpad-typing.sh
