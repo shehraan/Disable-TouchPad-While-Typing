@@ -18,7 +18,7 @@ Note: The steps described below work on my current system. If they don't work fo
 1. Copy disable-touchpad-typing.sh to /usr/local/bin (Note that you will have to change the location in the .service file if you decide to put this in a different location)
 2. Make it executable by doing the following command:
 ```
-chmod +x /usr/local/bin/disable-touchpad-typing.sh
+chmod +x /usr/local/bin/touchpad-disable-on-mouse.sh
 ```
 2. Copy *disable-touchpad-while-typing.service* to /.config/systemd/user/
 3. Enable daemon with the following:
